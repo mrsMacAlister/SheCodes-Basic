@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍉 Square Watermelon</title>
+    <style>
+      body {
+        background: radial-gradient(
+          circle at 7.5% 24%,
+          rgb(237, 161, 193) 0%,
+          rgb(250, 178, 172) 25.5%,
+          rgb(190, 228, 210) 62.3%,
+          rgb(215, 248, 247) 93.8%
+        );
+      }
+      div {
+        max-width: 600px;
+        display: block;
+        margin: 0 auto;
+        padding: 20px;
+        background: rgba(250, 250, 250, 0.7);
+        border-radius: 10px;
+      }
+      h1 {
+        text-align: center;
+        padding: 20px;
+        margin: 0 auto;
+        color: white;
+        text-shadow: -1px -1px 0 yellow, -1px -1px 0 yellow;
+        background: linear-gradient(
+          60deg,
+          rgba(255, 0, 0, 0.7),
+          rgba(114, 240, 114, 0.7)
+        );
+        border: 1px solid rgba(255, 99, 71, 0.4);
+        border-radius: 6px;
+      }
+      h2 {
+        text-align: center;
+        color: #143412;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+      }
+      p {
+        color: rgba(0, 0, 0, 0.7);
+        font-family: fantasy;
+        text-align: center;
+      }
+      .about {
+        padding: 15px;
+        border: 1px solid rgba(90, 171, 39, 0.7);
+        border-radius: 10px;
+      }
+      a:hover {
+        cursor: pointer;
+      }
+      button {
+        display: block;
+        margin: 20px auto 30px;
+        padding: 10px 18px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-weight: bold;
+        font-size: medium;
+        color: white;
+        background-color: tomato;
+        border-radius: 20px;
+        border: 1px solid white;
+      }
+      button:hover {
+        cursor: pointer;
+        color: tomato;
+        background-color: white;
+        font-size: large;
+        border: 2px solid tomato;
+      }
+      footer {
+        background-color: darkgrey;
+        min-height: 60px;
+        text-align: center;
+        padding: 15px;
+        font-size: 14px;
+        font-family: "Courier New", Courier, monospace;
+        color: white;
+      }
+      hr {
+        margin: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="allInOne">
+      <div class="main">
+        <h1>Amazing Watermelons</h1>
+        <h2>Japanese Square Watermelons</h2>
+        <img
+          src="https://www.redduckpost.com/wp-content/uploads/2016/07/7987-885x515.jpg"
+          alt="Square Watermelons"
+        />
+        <p class="about">
+          Square or cube watermelons are watermelons grown into the shape of a
+          cube. <br />
+          Cube watermelons are commonly sold in <em>Japan</em>, where they are
+          essentially ornamental and are often very expensive, with prices as
+          high as <strong>US$200</strong>.
+        </p>
+        <p>
+          Read more about it on
+          <a href="https://en.wikipedia.org/wiki/Square_watermelon"
+            >Wikipedia.</a
+          >
+        </p>
+        <button>Buy Square Watermelons</button>
+      </div>
+      <footer>
+        Coded by mrs.MacAlister
+        <hr />
+      </footer>
+    </div>
+    <script>
+      function buyWatermelons() {
+        let amount = prompt(
+          "How many square watermelons would you like to buy? (Type in a number)"
+        );
+        let name = prompt("Great! Please type in your name:");
+        let email = prompt(
+          "Thank you, " +
+            name +
+            "! Please provide us with your email so we can send you an offer."
+        );
+        let content = document.querySelector(".allInOne");
+
+        if (amount == 1) {
+          content.innerHTML =
+            "Thank you for showing interest in buying amazing Japanese Square Watermelon, " +
+            name +
+            " 😃" +
+            " <br /> We will send you an offer for 1 Japanese Square Watermelon 🍉 to your email " +
+            email;
+        } else if (amount >= 2) {
+          content.innerHTML =
+            "Thank you for showing interest in buying amazing Japanese Square Watermelons, " +
+            name +
+            " 😃" +
+            " <br /> We will send you an offer for " +
+            amount +
+            " Japanese Square Watermelons 🍉 to your email " +
+            email;
+        } else {
+          content.innerHTML =
+            "We are sorry to hear you want to pass on this amazing opportunity.🙁";
+        }
+      }
+
+      let buyButton = document.querySelector("button");
+      buyButton.addEventListener("click", buyWatermelons);
+    </script>
+  </body>
+</html>
